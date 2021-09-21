@@ -14,7 +14,7 @@ const mysql = require('mysql');
 
 const con = mysql.createConnection({
   host: 'localhost',
-  port: 3308,
+  port: 3306,
   user: 'nodejs',
   password: '11111111',
   database: 'part_time',
