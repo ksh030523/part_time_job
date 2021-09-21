@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+  <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <title>아르바이트 추가</title>
+        <style>
+          body{
+            text-align: center;
+          }
+          h1{
+            text-align: center;
+        }
+        form{
+            font-size: 15px;
+        }
+        #view{
+            text-align: center;
+            position: relative;
+        }
+        input{
+            width: 90%;
+            padding: 10px;
+            display: table; 
+            margin-left: auto; 
+            margin-right: auto;
+            font-size: 15px;
+        }
+        #add{
+            position: absolute;
+            font-size: 30px;
+            padding: 10px 20px 10px 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+            bottom:0;
+            right:0;
+            margin-right: 25px;
+            background-color: white;
+        }
+        </style>
+    </head>
+<body>
+  <h1>아르바이트 추가</h1>
+    <form action="/" method="POST">
+    <div id="view"></div> 
+      <input type="text" name="name"placeholder="이름"><br>
+      <input type="text" name="age" placeholder="나이"><br>
+      <input type="text" name="phoneNum" placeholder="전화번호"><br>
+      <input type="time" name="go_to_work" placeholder="출근 시간"><br>
+      <input type="time" name="off_work" placeholder="퇴근 시간"><br>
+      <input type="text" name="money" placeholder="시급"><br>
+      <input type="date" name="joinday" placeholder="입사일"><br>
+      <input type="text" name="working_day" placeholder="근무일"><br>
+        <button type="submit" id="add">추가</button>
+ 
+    </form>
+</body>
+</html>

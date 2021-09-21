@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>아르바이트생 리스트</title>
+    <style>
+        table {
+            width: 90%;
+            border: 1px solid black;
+            border-collapse: collapse;
+            display: table; 
+            margin-left: auto; 
+            margin-right: auto;
+            font-size: 18px;
+          }
+          th, td {
+            border: 1px solid black;
+            text-align: center;
+          }
+          #view{
+              position: relative;
+          }
+          #add{
+            position:absolute;
+            bottom:0;
+            right:0;
+            margin-right: 25px;
+          }
+          h1{
+              text-align: center;
+          }
+          a{
+              text-decoration: none;
+              color: black;
+          }
+          #add a{
+              font-size: 30px;
+              padding: 10px;
+              border: 1px solid black;
+              border-radius: 5px;
+          }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>아르바이트 리스트</h1>
+        <table  id="view">
+            <tr>
+                <th>근태관리</th>
+                <th>이름</th>
+                <th>나이</th>
+                <th>전화번호</th>
+                <th>출근 시간</th>
+                <th>퇴근 시간</th>
+                <th>시급</th>
+                <th>입사일</th>
+                <th>근무일</th>
+                <th>수정</th>
+                <th>삭제</th>
+            </tr>
+            <% alba.forEach(function (value) { %>
+            <tr>
+                <td><a href="/w_manage/<%= value.id %>">근태관리</a></td>
+                <td><%= value.name %></td>
+                <td><%= value.age %></td>
+                <td><%= value.phoneNum %></td>
+                <td><%= value.go_to_work %></td>
+                <td><%= value.off_work %></td>
+                <td><%= value.money %></td>
+                <td><%= value.joinday %></td>
+                <td><%= value.working_day %></td>
+                <td><a href="/edit/<%= value.id %>">수정</a></td>
+                <td><a href="/delete/<%= value.id %>">삭제</a></td>
+            </tr>
+            <% }); %>
+        </table>
+        <div id="add"><p><a href="/create">아르바이트 추가</a></p></div>
+    </div>
+</body>
+</html>

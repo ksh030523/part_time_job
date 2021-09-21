@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>수정</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        form{
+            font-size: 15px;
+        }
+        #view{
+            text-align: center;
+            position: relative;
+        }
+        input{
+            width: 90%;
+            padding: 10px;
+            display: table; 
+            margin-left: auto; 
+            margin-right: auto;
+            font-size: 15px;
+        }
+        #edit{
+            position: absolute;
+            font-size: 30px;
+            padding: 10px 20px 10px 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+            bottom:0;
+            right:0;
+            margin-right: 25px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>수정</h1>
+    <form action="/update/<%= alba[0].id %>" method="POST">
+        <div class="form__group field" id="view"></div>
+            <input type="text" name="name" value="<%= alba[0].name %>" placeholder="이름"><br>
+            <input type="text" name="age" value="<%= alba[0].age %>" placeholder="나이"><br>
+            <input type="text" name="phoneNum" value="<%= alba[0].phoneNum %>" placeholder="전화번호"><br>
+            <input type="time" name="go_to_work" value="<%= alba[0].go_to_work %>" placeholder="출근 시간"><br>
+            <input type="time" name="off_work" value="<%= alba[0].off_work %>" placeholder="퇴근 시간"><br>
+            <input type="text" name="money" value="<%= alba[0].money %>" placeholder="시급"><br>
+            <input type="date" name="joinday" value="<%= alba[0].joinday %>" placeholder="입사일"><br>
+            <input type="text" name="working_day" value="<%= alba[0].working_day %>" placeholder="근무일"><br>
+            <button type="submit" id="edit">수정</button>
+        </div>
+    </form>    
+</body>
+</html>
